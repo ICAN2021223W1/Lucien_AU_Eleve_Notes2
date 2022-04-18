@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ 'general.accueil'|trans }}
+{% endblock %}
+
+{% block body %}
+	{% if matieres is not empty %}
+		<h1>{{ 'note.titre.liste'|trans }}</h1>
+		{% if notes is not empty %}
+			<table class="table">
+				<thead>
+					<tr>
+						<th>{{ 'note.table.notes'|trans }}</th>
+						<th>{{ 'matiere.table.matieres'|trans }}</th>
+						<th>{{ 'matiere.table.coeff'|trans }}</th>
+						<th>{{ 'note.table.date'|trans }}</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for n in notes %}
+						<tr>
+							<td>{{n.note}}</td>
+							<td>{{n.matiere}}</td>
+							<td>{{n.matiere.coefficient}}</td>
+							<td>{{n.CreatedAt|date('d-m-Y H:i:s')}}</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+
+			{# Somme coeff total #}
+			{% set sommeCoeff = 0 %}
+			{% for n in notes %}
+				{% set sommeCoeff = sommeCoeff + n.matiere.coefficient %}
+			{% endfor %}
+
+			{# somme note + son coeff #}
+			{% set sommeNoteCoeff = 0 %}
+			{% for n in notes %}
+				{% set sommeNoteCoeff = sommeNoteCoeff + (n.note * n.matiere.coefficient) %}
+			{% endfor %}
+
+			{# Moyenne général #}
+			<h3>{{ 'note.titre.moyenne'|trans }}:</h3>
+
+			{% if sommeCoeff == 0 %}
+				<h4>{{sommeNoteCoeff}}/20</h4>
+			{% else %}
+				<h4>{{sommeNoteCoeff / sommeCoeff}}/20</h4>
+			{% endif %}
+
+		{% else %}
+			<p>{{ 'note.erreur.abs'|trans }}</p>
+		{% endif %}
+
+		<h2>{{ 'formulaire.titre.ajoutN'|trans }}</h2>
+		{{ form(ajout)}}
+			{% else %}
+				<p>{{ 'note.erreur.absM'|trans }}</p>
+				<a class="btn btn-primary" href="{{path('matieres')}}">{{ 'general.matieres'|trans }}</a>
+		{% endif %}
+	{% endblock %}

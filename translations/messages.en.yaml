@@ -1,0 +1,52 @@
+# messages.en.yaml
+general:
+  accueil: Home
+  matieres: Subjects
+
+note:
+  notes: Grades
+  titre:
+    liste: Here is the list of  grades
+    moyenne: This is your overall average
+  table:
+    notes: Grade
+    date: Date created
+  erreur:
+    abs: There are no grades.
+    absM: Please click to the subject buttun to add a subject and therefore a grade.
+    introuvable: Grade not found
+  sucess:
+    add: Grade added
+
+matiere:
+  matiere: Subject
+  titre:
+    liste: Here is the list of subject
+    unique: The subject %nom% with a coefficient of %coeff%
+  table:
+    matieres: Subjects
+    coeff: Coefficients
+  action:
+    voir: See
+    suprr: Delete
+  erreur:
+    abs: There are no subject.
+    introuvable: Subject not found
+  sucess:
+    add: Subject added
+    maj: Subject updated
+    delete: Subject deleted
+
+formulaire:
+  titre:
+    ajoutM: Add a subject
+    ajoutN: Add a grade
+    msa: Update the subject
+    suprr: Delete subject
+  labels:
+    nom_matiere: Name of your subject
+    nom_note: Your grade
+    coeff: The coefficient of your subject
+    choix_matiere: Choose your subject from the list
+  action:
+    envoie: Send

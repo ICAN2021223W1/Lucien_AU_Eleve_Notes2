@@ -1,0 +1,53 @@
+# messages.fr.yaml
+
+general:
+  accueil: Accueil
+  matieres: Matières
+
+note:
+  notes: Notes
+  titre:
+    liste: Voici la liste des notes
+    moyenne: Voici votre moyenne générale
+  table:
+    notes: Notes
+    date: Date de création
+  erreur:
+    abs: Il n'y a pas de note.
+    absM: Veuillez vous cliquer sur le bouton matière, pour pouvoir ajouter une matière donc une note.
+    introuvable: Note introuvable
+  sucess:
+    add: Note ajoutée
+
+matiere:
+  matiere: Matiere
+  titre:
+    liste: Voici la liste des matieres
+    unique: La matiere %nom% avec un coefficient de %coeff%
+  table:
+    matieres: Matières
+    coeff: Coefficients
+  action:
+    voir: Voir
+    suprr: Supprimer
+  erreur:
+    abs: Il n'y a pas de matiere.
+    introuvable: Matière introuvable
+  sucess:
+    add: Matiere ajoutée
+    maj: Matiere mis à jour
+    delete: Matiere supprimer
+
+formulaire:
+  titre:
+    ajoutM: Ajouter une matière
+    ajoutN: Ajouter une note
+    msa: Mettre à jour la matière
+    suprr: Supprimer la matiere
+  labels:
+    nom_matiere: Nom de votre matière
+    nom_note: Votre note
+    coeff: Le coefficient de votre matière
+    choix_matiere: Choissisez votre matière parmis la liste
+  action:
+    envoie: Envoyer

@@ -1,0 +1,4 @@
+# translations/validators/validators.en.yaml
+minMessage: Your note must have at least {{ limit }} digits.
+maxMessage: This value is too long. It must be {{ limit }} digits or less
+notInRangeMessage: Your grade must be between {{ min }} and {{ max }} to enter

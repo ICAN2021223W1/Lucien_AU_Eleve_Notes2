@@ -1,0 +1,5 @@
+# translations/validators/validators.fr.yaml
+
+minMessage: Votre note doit comporter au moins {{ limit }} chiffre.
+maxMessage: Cette valeur est trop longue. Elle doit comporter {{ limit }} chiffres ou moins
+notInRangeMessage: Vous note doit compris entre {{ min }} et {{ max }}  pour entrer

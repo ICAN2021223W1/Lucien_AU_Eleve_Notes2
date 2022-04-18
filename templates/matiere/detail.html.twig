@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ 'matiere.matiere'|trans }}
+	{{matiere.nom}}
+{% endblock %}
+
+{% block body %}
+	<h1>
+		{{ 'matiere.titre.unique'|trans ( { '%nom%' : matiere.nom ,'%coeff%' : matiere.coefficient} ) }}</h1>
+	<h2>{{ 'formulaire.titre.msa'|trans }}</h2>
+	{{ form(edit) }}
+		<h2>{{ 'formulaire.titre.suprr'|trans }}</h2>
+		<a href="{{path('matiere_delete', {'id':matiere.id})}}" class="btn btn-danger">{{ 'matiere.action.suprr'|trans }}</a>
+	{% endblock %}
